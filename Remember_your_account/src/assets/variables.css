@@ -1,0 +1,23 @@
+:root {
+
+    /* Navigation bar */
+    
+    --navbarGradientFirstColor: #3CA9A9;
+    --navbarGradientSecondColor: #183B43;
+
+    /* Background */
+
+    --bgColor: #3D5C6E;
+
+    /* Card */
+
+    --cardColor: #6CABBF;
+    
+    /* Button */
+
+    --buttonColor: #2799A1;
+    
+    /* Text and fonts*/
+
+    --textColor: white;
+}
