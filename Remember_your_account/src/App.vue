@@ -1,5 +1,6 @@
 <template>
 
+ <main-layout />
   
 </template>
 

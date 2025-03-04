@@ -4,6 +4,7 @@
     
     --navbarGradientFirstColor: #3CA9A9;
     --navbarGradientSecondColor: #183B43;
+    --navbarTextColor: white;
 
     /* Background */
 
@@ -12,10 +13,17 @@
     /* Card */
 
     --cardColor: #6CABBF;
+    --cardBorderRadius: 120px;
+    --cardWidth: 600px;
+    --cardHeight: 600px;
     
     /* Button */
 
     --buttonColor: #2799A1;
+    --buttonTextColor: white;
+    --buttonBorderRadius: 45px;
+    --buttonWidth: 400px;
+    --buttonHeight: 150px;
     
     /* Text and fonts*/
 
