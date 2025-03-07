@@ -28,4 +28,9 @@
     /* Text and fonts*/
 
     --textColor: white;
+
+    /* Form */
+
+    --formBgColor: #6CABBF;
+    --formBorderRadius: 120px;
 }
