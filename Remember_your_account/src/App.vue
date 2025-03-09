@@ -1,6 +1,6 @@
 <template>
 
- <main-layout />
+    <authorization-registration />
   
 </template>
 

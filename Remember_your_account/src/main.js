@@ -10,6 +10,8 @@ import IconInfo from './components/icons/IconInfo.vue'
 import IconMenuBars from './components/icons/IconMenuBars.vue'
 import AuthForm from './components/AuthForm.vue'
 import FormInput from './components/FormInput.vue'
+import RegistrationForm from './components/RegistrationForm.vue'
+import AuthorizationRegistration from './views/AuthorizationRegistration.vue'
 
 const app = createApp(App)
 app.component('main-layout', MainLayout)
@@ -20,4 +22,6 @@ app.component('icon-info', IconInfo)
 app.component('icon-menu-bars', IconMenuBars)
 app.component('auth-form', AuthForm)
 app.component('form-input', FormInput)
+app.component('authorization-registration', AuthorizationRegistration)
+app.component('registration-form', RegistrationForm)
 app.mount('#app')
