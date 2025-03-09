@@ -1,6 +1,6 @@
 <template>
 
-    <auth-form :name="'registrationForm'">
+    <auth-form :name="'registrationForm'" @submit="submitForm">
 
         <form-input 
 
@@ -9,7 +9,7 @@
             :inputType = "'text'"
             :isRequired = "true"
             :inputPlaceholder = "'Enter your first name'"
-            v-model:inputValue = "user.firstName"
+            v-model = "user.firstName"
 
         />
 
@@ -20,7 +20,7 @@
             :inputType = "'email'"
             :isRequired = "true"
             :inputPlaceholder = "'Enter your email'"
-            v-model:inputValue = "user.email"
+            v-model = "user.email"
 
         />
         <form-input 
@@ -30,7 +30,7 @@
             :inputType = "'password'"
             :isRequired = "true"
             :inputPlaceholder = "'Enter your password'"
-            v-model:inputValue = "user.password"
+            v-model = "user.password"
 
         />
 
@@ -51,9 +51,14 @@
             :inputType = "'date'"
             :isRequired = "true"
             :inputPlaceholder = "'Enter your birth date'"
-            v-model:inputValue = "user.birthDate"
+            v-model = "user.birthDate"
 
         />
+
+        <!-- todo: change button to get 'type' as property-->
+        <button type="submit" class="default-button">Register</button>
+
+        <a href="" class="login-link">Already have an account? Log in.</a>
 
     </auth-form>
 
@@ -61,6 +66,30 @@
 
 <script setup>
 
+    import {reactive} from 'vue';
 
+    const user = reactive({
+        firstName: '',
+        email: '',
+        password: '',
+        birthDate: ''
+    });
+
+    const submitForm = async () => {
+
+        console.log(JSON.stringify(user));
+        
+    }
 
 </script>
+
+<style>
+
+    .default-button {
+        
+        width: 50%;
+        height:50px;
+
+    }
+
+</style>
