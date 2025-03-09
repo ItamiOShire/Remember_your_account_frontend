@@ -5,9 +5,9 @@
             class="default-input" 
             :id="inputId" 
             :required="isRequired" 
-            :value="inputValue" 
+            :value="modelValue" 
             :placeholder="inputPlaceholder"
-            @input="$emit('update:inputValue', $event.target.value)">
+            @input="updateValue">
 
 </template>
 
@@ -35,7 +35,7 @@
             required: true
         },
 
-        inputValue: {
+        modelValue: {
             type: String,
             required: true
         },
@@ -47,6 +47,24 @@
 
     });
 
-    defineEmits(["update:inputValue"]);
+   const emit = defineEmits(["update:modelValue"]);
+
+    const updateValue = (event) => {
+    
+         emit('update:modelValue', event.target.value);
+    
+    }
 
 </script>
+
+<style>
+
+    .default-input {
+        padding:10px;
+        margin: 10px;
+        border-radius: 20px;
+        border:none;
+        width:50%;
+    }
+
+</style>
