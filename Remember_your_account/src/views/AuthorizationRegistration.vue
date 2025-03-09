@@ -14,20 +14,7 @@
 
         <section class="form-section">
 
-            <auth-form>
-
-                <form-input 
-
-                    :inputLabel = "'First Name'"
-                    :inputId = "'firstName'"
-                    :inputType = "'text'"
-                    :isRequired = "true"
-                    :inputPlaceholder = "'Enter your first name'"
-                    v-model:inputValue = "user.firstName"
-
-                />
-
-            </auth-form>
+            <registration-form/>
 
         </section>
 
@@ -36,7 +23,5 @@
 </template>
 
 <script>
-
-
 
 </script>
