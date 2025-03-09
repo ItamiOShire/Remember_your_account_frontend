@@ -2,7 +2,7 @@
 
     <div class="auth-form-container">
 
-        <form class="auth-form" :name="formName">
+        <form @submit.prevent="submitForm" class="auth-form" :name="formName">
 
             <slot></slot>
 
@@ -14,7 +14,9 @@
 
 <script setup>
 
-    defineProps({
+    import { defineProps, defineEmits } from 'vue';
+
+    const props = defineProps({
 
         formName: {
             type: String,
@@ -23,19 +25,29 @@
 
     });
 
+    const emit = defineEmits(['submit']);
+
+    const submitForm = () => {
+
+        emit('submit');
+
+    }
+
 </script>
 
 <style>
 
-    div.auth-form-container {
+    form.auth-form {
 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 20px;
 
         background-color: var(--formBgColor);
-        border-radius: var(--formBorderRadius); 
+        border-radius: var(--formBorderRadius);
+        width: var(--formWidth);
 
     }
 
