@@ -6,31 +6,7 @@
 
     <main id="main-content">
 
-      <card>
-
-        <p class="card-text-container">
-
-          Don't have an account? <br>
-          Register now!
-
-        </p>
-
-        <Button>Register</Button>
-
-      </card>
-
-      <card>
-
-        <p class="card-text-container">
-
-          Log in now and recall <br>
-          your game accounts!
-
-        </p>
-
-        <Button>Log in</Button>
-
-      </card>
+      <slot></slot>
 
     </main>
 
@@ -40,9 +16,6 @@
 
 <script>
 
-  import NavigationBar from '../components/NavigationBar.vue';
-  import Card from '../components/Card.vue';
-  import Button from '../components/Button.vue';
 
 </script>
 
